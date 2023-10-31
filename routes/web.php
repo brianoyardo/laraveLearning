@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/categorias', function () {
     return ('Esta es la ruta de categorias');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
