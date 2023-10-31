@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/categorias', function () {
-    return ('Esta es la ruta de categorias');
+    return view('categorias.index');
 });
 
 Auth::routes();
