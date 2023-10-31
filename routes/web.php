@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,7 @@ Route::get('/', function () {
     // return ('Hola mundo');
 });
 
-Route::get('/categorias', function () {
-    return view('categorias.index');
-});
+Route::get('/categorias', [CategoriaController::class, 'index']);
 
 Auth::routes();
 
